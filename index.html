@@ -38,248 +38,128 @@ body{
 }
 
 /* ── HEADER ── */
-.site-header{
-  text-align:center;
-  padding:2.4rem 1rem 1.6rem;
-  position:relative;
-}
+.site-header{text-align:center;padding:2.4rem 1rem 1.6rem;position:relative}
 .emblem{
-  width:72px;height:72px;
-  margin:0 auto 1rem;
-  border-radius:50%;
-  background: linear-gradient(135deg,#c9973a,#f5d98b,#c9973a);
-  display:flex;align-items:center;justify-content:center;
-  font-size:2rem;
+  width:72px;height:72px;margin:0 auto 1rem;border-radius:50%;
+  background:linear-gradient(135deg,#c9973a,#f5d98b,#c9973a);
+  display:flex;align-items:center;justify-content:center;font-size:2rem;
   box-shadow:0 0 0 4px rgba(201,151,58,0.2),0 0 0 8px rgba(201,151,58,0.08);
   animation:pulse 3s ease-in-out infinite;
 }
 @keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(201,151,58,0.2),0 0 0 8px rgba(201,151,58,0.08)}50%{box-shadow:0 0 0 6px rgba(201,151,58,0.3),0 0 0 14px rgba(201,151,58,0.1)}}
-.site-header h1{
-  font-family:'Playfair Display',serif;
-  font-size:clamp(1.3rem,4vw,2rem);
-  color:var(--gold2);
-  letter-spacing:.04em;
-  line-height:1.2;
-}
-.site-header p{
-  color:var(--muted);
-  font-size:.85rem;
-  margin-top:.4rem;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-.gold-line{
-  width:80px;height:2px;
-  background:linear-gradient(90deg,transparent,var(--gold),transparent);
-  margin:.8rem auto;
-}
+.site-header h1{font-family:'Playfair Display',serif;font-size:clamp(1.3rem,4vw,2rem);color:var(--gold2);letter-spacing:.04em;line-height:1.2}
+.site-header p{color:var(--muted);font-size:.85rem;margin-top:.4rem;letter-spacing:.08em;text-transform:uppercase}
+.gold-line{width:80px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:.8rem auto}
 
 /* ── TABS ── */
-.tabs-wrap{
-  display:flex;
-  justify-content:center;
-  gap:.5rem;
-  padding:.8rem 1rem;
-  flex-wrap:wrap;
-}
+.tabs-wrap{display:flex;justify-content:center;gap:.5rem;padding:.8rem 1rem;flex-wrap:wrap}
 .tab-btn{
-  padding:.6rem 1.4rem;
-  border-radius:40px;
-  border:1.5px solid var(--border);
-  background:transparent;
-  color:var(--muted);
-  cursor:pointer;
-  font-family:'DM Sans',sans-serif;
-  font-size:.85rem;
-  font-weight:500;
-  letter-spacing:.04em;
-  transition:all .25s;
-  display:flex;align-items:center;gap:.45rem;
-  white-space:nowrap;
+  padding:.6rem 1.4rem;border-radius:40px;border:1.5px solid var(--border);
+  background:transparent;color:var(--muted);cursor:pointer;
+  font-family:'DM Sans',sans-serif;font-size:.85rem;font-weight:500;letter-spacing:.04em;
+  transition:all .25s;display:flex;align-items:center;gap:.45rem;white-space:nowrap;
 }
 .tab-btn svg{width:16px;height:16px;flex-shrink:0}
 .tab-btn:hover{border-color:var(--gold);color:var(--gold2)}
-.tab-btn.active{
-  background:linear-gradient(135deg,var(--gold),var(--gold2));
-  border-color:transparent;
-  color:var(--navy);
-  font-weight:600;
-  box-shadow:0 4px 20px rgba(201,151,58,0.4);
-}
+.tab-btn.active{background:linear-gradient(135deg,var(--gold),var(--gold2));border-color:transparent;color:var(--navy);font-weight:600;box-shadow:0 4px 20px rgba(201,151,58,0.4)}
 
-/* ── CONTENT WRAP ── */
-.content{
-  max-width:600px;
-  margin:0 auto;
-  padding:0 1rem 3rem;
-}
+/* ── CONTENT ── */
+.content{max-width:600px;margin:0 auto;padding:0 1rem 3rem}
 .tab-pane{display:none}
 .tab-pane.active{display:block;animation:fadeUp .35s ease}
 @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 
 /* ── CARD ── */
-.card{
-  background:rgba(255,255,255,0.04);
-  border:1px solid var(--border);
-  border-radius:var(--radius);
-  padding:1.6rem;
-  margin-bottom:1.2rem;
-  backdrop-filter:blur(8px);
-}
-.card-title{
-  font-family:'Playfair Display',serif;
-  font-size:1.1rem;
-  color:var(--gold2);
-  margin-bottom:1.2rem;
-  display:flex;align-items:center;gap:.5rem;
-}
+.card{background:rgba(255,255,255,0.04);border:1px solid var(--border);border-radius:var(--radius);padding:1.6rem;margin-bottom:1.2rem;backdrop-filter:blur(8px)}
+.card-title{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--gold2);margin-bottom:1.2rem;display:flex;align-items:center;gap:.5rem}
 .card-title svg{width:18px;height:18px;color:var(--gold)}
 
-/* ── FORM ELEMENTS ── */
+/* ── FORM ── */
 .form-group{margin-bottom:1.1rem}
-label{
-  display:block;
-  font-size:.78rem;
-  font-weight:600;
-  text-transform:uppercase;
-  letter-spacing:.08em;
-  color:var(--muted);
-  margin-bottom:.45rem;
-}
+label{display:block;font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:.45rem}
 select,input,textarea{
-  width:100%;
-  background:rgba(255,255,255,0.06);
-  border:1.5px solid rgba(201,151,58,0.2);
-  border-radius:10px;
-  color:var(--cream);
-  font-family:'DM Sans',sans-serif;
-  font-size:.95rem;
-  padding:.7rem 1rem;
-  transition:border .2s,box-shadow .2s;
-  appearance:none;
-  -webkit-appearance:none;
-  outline:none;
+  width:100%;background:rgba(255,255,255,0.06);border:1.5px solid rgba(201,151,58,0.2);
+  border-radius:10px;color:var(--cream);font-family:'DM Sans',sans-serif;font-size:.95rem;
+  padding:.7rem 1rem;transition:border .2s,box-shadow .2s;appearance:none;-webkit-appearance:none;outline:none;
 }
-select:focus,input:focus,textarea:focus{
-  border-color:var(--gold);
-  box-shadow:0 0 0 3px rgba(201,151,58,0.15);
-  background:rgba(255,255,255,0.08);
-}
+select:focus,input:focus,textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,151,58,0.15);background:rgba(255,255,255,0.08)}
 select option{background:var(--navy2);color:var(--cream)}
 select:disabled{opacity:.4;cursor:not-allowed}
 textarea{resize:vertical;min-height:110px;line-height:1.6}
 
-/* Datalist / combo input */
-.combo-wrap{position:relative}
-.combo-wrap input{padding-right:2.5rem}
-.combo-wrap::after{
-  content:'▾';
-  position:absolute;right:1rem;top:50%;transform:translateY(-50%);
-  color:var(--gold);font-size:.8rem;pointer-events:none;
-}
-
 /* ── BUTTONS ── */
-.btn{
-  width:100%;
-  padding:.85rem 1.5rem;
-  border-radius:10px;
-  border:none;
-  font-family:'DM Sans',sans-serif;
-  font-size:1rem;
-  font-weight:600;
-  cursor:pointer;
-  transition:all .22s;
-  display:flex;align-items:center;justify-content:center;gap:.5rem;
-  letter-spacing:.03em;
-}
-.btn-gold{
-  background:linear-gradient(135deg,var(--gold),var(--gold2));
-  color:var(--navy);
-  box-shadow:0 4px 18px rgba(201,151,58,0.35);
-}
-.btn-gold:hover:not(:disabled){
-  transform:translateY(-2px);
-  box-shadow:0 6px 28px rgba(201,151,58,0.5);
-}
+.btn{width:100%;padding:.85rem 1.5rem;border-radius:10px;border:none;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:600;cursor:pointer;transition:all .22s;display:flex;align-items:center;justify-content:center;gap:.5rem;letter-spacing:.03em}
+.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);box-shadow:0 4px 18px rgba(201,151,58,0.35)}
+.btn-gold:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 6px 28px rgba(201,151,58,0.5)}
 .btn-gold:disabled{opacity:.45;cursor:not-allowed;transform:none}
-.btn-outline{
-  background:transparent;
-  border:1.5px solid var(--gold);
-  color:var(--gold2);
-}
+.btn-outline{background:transparent;border:1.5px solid var(--gold);color:var(--gold2)}
 .btn-outline:hover{background:rgba(201,151,58,0.1)}
 .btn svg{width:18px;height:18px}
+.btn-sm{padding:.4rem .9rem;font-size:.8rem;border-radius:8px;background:rgba(201,151,58,0.15);border:1px solid var(--gold);color:var(--gold2);cursor:pointer;font-family:'DM Sans',sans-serif;font-weight:500;transition:all .2s}
+.btn-sm:hover{background:rgba(201,151,58,0.25)}
 
 /* ── SPINNER ── */
-.spinner{
-  display:inline-block;
-  width:18px;height:18px;
-  border:2.5px solid rgba(10,22,40,0.3);
-  border-top-color:var(--navy);
-  border-radius:50%;
-  animation:spin .7s linear infinite;
-}
+.spinner{display:inline-block;width:18px;height:18px;border:2.5px solid rgba(10,22,40,0.3);border-top-color:var(--navy);border-radius:50%;animation:spin .7s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 
-/* ── LOADING OVERLAY ── */
-.loading-bar{
-  position:fixed;top:0;left:0;right:0;height:3px;
-  background:linear-gradient(90deg,var(--gold),var(--gold3));
-  z-index:9999;
-  animation:loadbar 1.5s ease-in-out infinite;
-  display:none;
-}
+/* ── LOADING BAR ── */
+.loading-bar{position:fixed;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold3));z-index:9999;animation:loadbar 1.5s ease-in-out infinite;display:none}
 .loading-bar.show{display:block}
 @keyframes loadbar{0%{width:0%;opacity:1}80%{width:90%}100%{width:100%;opacity:0}}
 
 /* ── MODAL ── */
-.modal-overlay{
-  display:none;position:fixed;inset:0;
-  background:rgba(0,0,0,0.7);
-  z-index:1000;
-  align-items:center;justify-content:center;
-  padding:1rem;
-}
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:1000;align-items:center;justify-content:center;padding:1rem}
 .modal-overlay.show{display:flex;animation:fadeIn .2s}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
-.modal{
-  background:var(--navy2);
-  border:1px solid var(--border);
-  border-radius:20px;
-  padding:2rem 1.8rem;
-  max-width:380px;width:100%;
-  text-align:center;
-  animation:scaleIn .25s ease;
-  box-shadow:var(--shadow);
-}
+.modal{background:var(--navy2);border:1px solid var(--border);border-radius:20px;padding:2rem 1.8rem;max-width:380px;width:100%;text-align:center;animation:scaleIn .25s ease;box-shadow:var(--shadow)}
+.modal-wide{max-width:460px;text-align:left}
 @keyframes scaleIn{from{transform:scale(.9);opacity:0}to{transform:scale(1);opacity:1}}
 .modal-icon{font-size:3rem;margin-bottom:.8rem}
 .modal h3{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--gold2);margin-bottom:.6rem}
 .modal p{color:var(--muted);font-size:.9rem;line-height:1.6;margin-bottom:1.4rem}
 .modal .person-name{color:var(--cream);font-weight:600;font-size:1rem}
+.modal-input{width:100%;background:rgba(255,255,255,0.06);border:1.5px solid rgba(245,54,92,0.3);border-radius:10px;color:var(--cream);font-family:'DM Sans',sans-serif;font-size:.95rem;padding:.7rem 1rem;outline:none;margin:.8rem 0 .4rem;text-align:center;letter-spacing:.08em}
+.modal-input:focus{border-color:var(--danger);box-shadow:0 0 0 3px rgba(245,54,92,0.15)}
+.modal-input-normal{border-color:rgba(201,151,58,0.3)!important}
+.modal-input-normal:focus{border-color:var(--gold)!important;box-shadow:0 0 0 3px rgba(201,151,58,0.15)!important}
+
+/* ── PILL BUTTONS (feedback district/office selector) ── */
+.pill-group{display:flex;flex-wrap:wrap;gap:.45rem;margin-bottom:.3rem}
+.pill-btn{
+  padding:.45rem 1rem;border-radius:40px;border:1.5px solid var(--border);
+  background:transparent;color:var(--muted);cursor:pointer;
+  font-family:'DM Sans',sans-serif;font-size:.82rem;font-weight:500;
+  transition:all .2s;white-space:nowrap;
+}
+.pill-btn:hover{border-color:var(--gold);color:var(--gold2)}
+.pill-btn.active{background:rgba(201,151,58,0.15);border-color:var(--gold);color:var(--gold2)}
+
+/* Step indicator */
+.step-indicator{
+  display:flex;align-items:center;gap:.5rem;margin-bottom:1.2rem;
+  font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;
+  color:var(--muted);
+}
+.step-dot{
+  width:22px;height:22px;border-radius:50%;
+  background:rgba(255,255,255,0.06);border:1.5px solid rgba(255,255,255,0.12);
+  display:flex;align-items:center;justify-content:center;
+  font-size:.7rem;font-weight:700;flex-shrink:0;transition:all .3s;
+}
+.step-dot.done{background:rgba(45,206,137,0.2);border-color:var(--success);color:var(--success)}
+.step-dot.active{background:rgba(201,151,58,0.2);border-color:var(--gold);color:var(--gold2)}
+.step-line{flex:1;height:1px;background:rgba(255,255,255,0.08)}
 
 /* ── ADMIN ── */
 .login-card{max-width:380px;margin:0 auto}
-.login-card .card{padding:2rem 1.8rem}
 .login-header{text-align:center;margin-bottom:1.6rem}
 .login-header h2{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--gold2)}
 .login-header p{color:var(--muted);font-size:.85rem;margin-top:.3rem}
 
-/* Stats row */
+/* Stats */
 .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-bottom:1.2rem}
-.stat-card{
-  background:rgba(255,255,255,0.05);
-  border:1px solid var(--border);
-  border-radius:12px;
-  padding:1rem .8rem;
-  text-align:center;
-}
-.stat-num{
-  font-family:'Playfair Display',serif;
-  font-size:1.8rem;
-  color:var(--gold2);
-  line-height:1;
-}
+.stat-card{background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:12px;padding:1rem .8rem;text-align:center}
+.stat-num{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--gold2);line-height:1}
 .stat-label{color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;margin-top:.3rem}
 
 /* Progress */
@@ -287,145 +167,88 @@ textarea{resize:vertical;min-height:110px;line-height:1.6}
 .prog-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem}
 .prog-label{color:var(--muted);font-size:.8rem}
 .prog-pct{color:var(--gold2);font-weight:700;font-size:.9rem}
-.prog-bar{
-  height:8px;background:rgba(255,255,255,0.08);border-radius:99px;overflow:hidden;
-}
-.prog-fill{
-  height:100%;
-  background:linear-gradient(90deg,var(--gold),var(--gold3));
-  border-radius:99px;
-  transition:width 1s ease;
-  position:relative;overflow:hidden;
-}
-.prog-fill::after{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(90deg,transparent 0%,rgba(255,255,255,0.3) 50%,transparent 100%);
-  animation:shimmer 2s infinite;
-}
+.prog-bar{height:8px;background:rgba(255,255,255,0.08);border-radius:99px;overflow:hidden}
+.prog-fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--gold3));border-radius:99px;transition:width 1s ease;position:relative;overflow:hidden}
+.prog-fill::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 0%,rgba(255,255,255,0.3) 50%,transparent 100%);animation:shimmer 2s infinite}
 @keyframes shimmer{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
 
 /* Table */
 .table-wrap{overflow-x:auto;border-radius:12px;border:1px solid var(--border)}
 table{width:100%;border-collapse:collapse;font-size:.82rem}
-thead th{
-  background:rgba(201,151,58,0.12);
-  padding:.75rem .9rem;
-  text-align:left;
-  font-size:.72rem;
-  text-transform:uppercase;
-  letter-spacing:.07em;
-  color:var(--gold);
-  font-weight:600;
-  white-space:nowrap;
-}
+thead th{background:rgba(201,151,58,0.12);padding:.75rem .9rem;text-align:left;font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;color:var(--gold);font-weight:600;white-space:nowrap}
 tbody tr{border-bottom:1px solid rgba(255,255,255,0.05);transition:background .15s}
 tbody tr:last-child{border-bottom:none}
 tbody tr:hover{background:rgba(255,255,255,0.04)}
 tbody td{padding:.7rem .9rem;color:var(--cream);vertical-align:middle}
-.badge{
-  display:inline-flex;align-items:center;gap:.3rem;
-  padding:.25rem .65rem;border-radius:20px;
-  font-size:.72rem;font-weight:600;
-}
+.badge{display:inline-flex;align-items:center;gap:.3rem;padding:.25rem .65rem;border-radius:20px;font-size:.72rem;font-weight:600}
 .badge-present{background:rgba(45,206,137,0.18);color:var(--success)}
 .badge-absent{background:rgba(255,255,255,0.06);color:var(--muted)}
 .time-text{color:var(--muted);font-size:.78rem}
-.admin-bar{
-  display:flex;align-items:center;justify-content:space-between;
-  margin-bottom:1rem;flex-wrap:wrap;gap:.5rem;
-}
+.search-input{padding:.55rem 1rem;font-size:.85rem;border-radius:8px}
+.admin-bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;flex-wrap:wrap;gap:.5rem}
 .admin-bar h3{font-family:'Playfair Display',serif;color:var(--gold2);font-size:1rem}
-.btn-sm{
-  padding:.4rem .9rem;font-size:.8rem;border-radius:8px;
-  background:rgba(201,151,58,0.15);
-  border:1px solid var(--gold);
-  color:var(--gold2);
-  cursor:pointer;
-  font-family:'DM Sans',sans-serif;
-  font-weight:500;
-  transition:all .2s;
-}
-.btn-sm:hover{background:rgba(201,151,58,0.25)}
-
-/* Search filter */
-.search-input{
-  padding:.55rem 1rem;
-  font-size:.85rem;
-  border-radius:8px;
-}
 
 /* Alert inline */
-.alert{
-  border-radius:10px;
-  padding:.85rem 1rem;
-  font-size:.88rem;
-  margin-bottom:1rem;
-  display:none;
-  align-items:center;
-  gap:.6rem;
-}
+.alert{border-radius:10px;padding:.85rem 1rem;font-size:.88rem;margin-bottom:1rem;display:none;align-items:center;gap:.6rem}
 .alert.show{display:flex}
 .alert-err{background:rgba(245,54,92,0.15);border:1px solid rgba(245,54,92,0.3);color:#ff8fa3}
 .alert svg{width:18px;height:18px;flex-shrink:0}
 
 /* Empty state */
-.empty-state{
-  text-align:center;padding:2.5rem 1rem;
-  color:var(--muted);font-size:.9rem;
-}
+.empty-state{text-align:center;padding:2.5rem 1rem;color:var(--muted);font-size:.9rem}
 .empty-state .em-icon{font-size:2.5rem;margin-bottom:.7rem}
 
-/* Feedback card in admin */
-.fb-item{
-  padding:.9rem 1rem;
-  border-bottom:1px solid rgba(255,255,255,0.05);
-  transition:background .15s;
-}
+/* Feedback admin view */
+.fb-item{padding:.9rem 1rem;border-bottom:1px solid rgba(255,255,255,0.05);transition:background .15s}
 .fb-item:last-child{border-bottom:none}
 .fb-item:hover{background:rgba(255,255,255,0.03)}
 .fb-name{font-weight:600;font-size:.85rem;color:var(--gold2);margin-bottom:.25rem}
 .fb-msg{font-size:.83rem;color:var(--cream);line-height:1.55;opacity:.9}
 .fb-time{font-size:.72rem;color:var(--muted);margin-top:.25rem}
 
-/* Clear data modal */
-.modal-danger .btn-danger-solid{
-  background:linear-gradient(135deg,#f5365c,#e02244);
-  color:#fff;border:none;
-  box-shadow:0 4px 18px rgba(245,54,92,0.4);
-}
-.modal-danger .btn-danger-solid:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(245,54,92,0.5)}
-.modal-input{
-  width:100%;
-  background:rgba(255,255,255,0.06);
-  border:1.5px solid rgba(245,54,92,0.3);
-  border-radius:10px;
-  color:var(--cream);
-  font-family:'DM Sans',sans-serif;
-  font-size:.95rem;
-  padding:.7rem 1rem;
-  outline:none;
-  margin:.8rem 0 .4rem;
-  text-align:center;
-  letter-spacing:.08em;
-}
-.modal-input:focus{border-color:var(--danger);box-shadow:0 0 0 3px rgba(245,54,92,0.15)}
-
 /* Admin tabs */
 .admin-tabs{display:flex;gap:.4rem;margin-bottom:1rem;background:rgba(255,255,255,0.04);border-radius:10px;padding:.3rem}
-.admin-tab{flex:1;padding:.5rem;border:none;border-radius:8px;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.82rem;font-weight:500;color:var(--muted);background:transparent;transition:all .2s}
+.admin-tab{flex:1;padding:.5rem .3rem;border:none;border-radius:8px;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.78rem;font-weight:500;color:var(--muted);background:transparent;transition:all .2s;white-space:nowrap}
 .admin-tab.active{background:rgba(201,151,58,0.18);color:var(--gold2)}
+
+/* ── MANAGE OFFICERS ── */
+.officer-item{display:flex;align-items:center;justify-content:space-between;padding:.7rem .9rem;border:1px solid rgba(255,255,255,0.06);border-radius:8px;margin-bottom:.4rem;background:rgba(255,255,255,0.02);gap:.5rem}
+.officer-item-info .oname{font-weight:500;font-size:.88rem}
+.officer-item-info .ometa{font-size:.74rem;color:var(--muted);margin-top:.1rem}
+.btn-remove{padding:.3rem .75rem;border-radius:6px;background:rgba(245,54,92,0.12);border:1px solid rgba(245,54,92,0.3);color:#ff8fa3;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:600;flex-shrink:0;transition:all .2s}
+.btn-remove:hover{background:rgba(245,54,92,0.25)}
+.section-label{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:.6rem;padding-bottom:.4rem;border-bottom:1px solid var(--border)}
+
+/* ── CLEAR DATA MODAL ── */
+.clear-opt-btn{
+  width:100%;padding:.7rem 1rem;border-radius:10px;border:1.5px solid var(--border);
+  background:rgba(255,255,255,0.03);color:var(--cream);cursor:pointer;
+  font-family:'DM Sans',sans-serif;font-size:.88rem;font-weight:500;
+  text-align:left;transition:all .2s;margin-bottom:.4rem;display:flex;align-items:center;gap:.5rem;
+}
+.clear-opt-btn:hover{border-color:var(--gold);background:rgba(201,151,58,0.08)}
+.clear-opt-btn.danger-opt{border-color:rgba(245,54,92,0.25)}
+.clear-opt-btn.danger-opt:hover{border-color:var(--danger);background:rgba(245,54,92,0.08);color:#ff8fa3}
+.clear-back-btn{background:transparent;border:none;color:var(--muted);cursor:pointer;font-family:'DM Sans',sans-serif;font-size:.85rem;padding:.4rem .6rem;border-radius:6px;transition:color .2s;margin-bottom:.8rem;display:flex;align-items:center;gap:.3rem}
+.clear-back-btn:hover{color:var(--gold2)}
+.clear-confirm-tag{display:inline-block;padding:.25rem .7rem;background:rgba(201,151,58,0.12);border:1px solid var(--border);border-radius:20px;font-size:.8rem;color:var(--gold2);font-weight:500;margin-bottom:.8rem}
+.clear-section-title{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--gold2);margin-bottom:.5rem}
+
+/* ── ADD OFFICER MODAL ── */
+.modal-compact{max-width:360px}
 
 /* Scrollbar */
 ::-webkit-scrollbar{width:5px;height:5px}
 ::-webkit-scrollbar-track{background:var(--navy2)}
 ::-webkit-scrollbar-thumb{background:var(--gold);border-radius:99px}
 
-/* Responsive helpers */
+/* Responsive */
 @media(max-width:420px){
   .stats-grid{grid-template-columns:1fr 1fr}
   .stat-card:last-child{grid-column:span 2}
   thead th:nth-child(3),tbody td:nth-child(3){display:none}
   .tab-btn{padding:.55rem 1rem;font-size:.8rem}
+  .admin-tab{font-size:.72rem;padding:.45rem .2rem}
 }
 </style>
 </head>
@@ -460,7 +283,9 @@ tbody td{padding:.7rem .9rem;color:var(--cream);vertical-align:middle}
   </button>
 </div>
 
-<!-- ══════ TAB: ATTENDANCE ══════ -->
+<!-- ══════════════════════════════════════════
+     TAB: MARK ATTENDANCE
+══════════════════════════════════════════ -->
 <div class="content">
 <div class="tab-pane active" id="tab-attendance">
   <div class="card">
@@ -485,7 +310,7 @@ tbody td{padding:.7rem .9rem;color:var(--cream);vertical-align:middle}
 
     <div class="form-group">
       <label>Officer Name</label>
-      <select id="sel-name" disabled>
+      <select id="sel-name" disabled onchange="onNameChange()">
         <option value="">— Select Name —</option>
       </select>
     </div>
@@ -503,7 +328,9 @@ tbody td{padding:.7rem .9rem;color:var(--cream);vertical-align:middle}
   </div>
 </div>
 
-<!-- ══════ TAB: FEEDBACK ══════ -->
+<!-- ══════════════════════════════════════════
+     TAB: FEEDBACK  (cascading district → DS Office → name)
+══════════════════════════════════════════ -->
 <div class="tab-pane" id="tab-feedback">
   <div class="card">
     <div class="card-title">
@@ -511,30 +338,64 @@ tbody td{padding:.7rem .9rem;color:var(--cream);vertical-align:middle}
       Submit Feedback
     </div>
 
-    <div class="form-group">
-      <label>Your Name <span style="color:var(--muted);font-weight:400;text-transform:none;font-size:.75rem">(type or select)</span></label>
-      <div class="combo-wrap">
-        <input list="fb-names-list" id="fb-name-input" placeholder="Start typing your name…" oninput="onFbNameInput()" autocomplete="off"/>
-        <datalist id="fb-names-list"></datalist>
+    <!-- Step indicator -->
+    <div class="step-indicator" id="fb-steps">
+      <div class="step-dot active" id="fbsdot-1">1</div>
+      <div class="step-line"></div>
+      <div class="step-dot" id="fbsdot-2">2</div>
+      <div class="step-line"></div>
+      <div class="step-dot" id="fbsdot-3">3</div>
+      <div class="step-line"></div>
+      <div class="step-dot" id="fbsdot-4">4</div>
+      <span style="margin-left:.3rem;font-size:.72rem">Select · Office · Name · Message</span>
+    </div>
+
+    <!-- STEP 1: District -->
+    <div id="fb-step-1">
+      <div class="form-group" style="margin-bottom:.5rem">
+        <label>Step 1 — Select Your District</label>
+        <div class="pill-group" id="fb-district-pills"></div>
       </div>
     </div>
 
-    <div class="form-group">
-      <label>Your Feedback</label>
-      <textarea id="fb-text" placeholder="Please share your thoughts, suggestions, or comments about the ceremony…" maxlength="1000"></textarea>
-      <div style="text-align:right;font-size:.72rem;color:var(--muted);margin-top:.3rem">
-        <span id="fb-char">0</span>/1000
+    <!-- STEP 2: DS Office (shown after district selected) -->
+    <div id="fb-step-2" style="display:none">
+      <div class="form-group" style="margin-bottom:.5rem">
+        <label>Step 2 — Select DS Office</label>
+        <div class="pill-group" id="fb-office-pills"></div>
       </div>
     </div>
 
-    <button class="btn btn-gold" id="btn-feedback" onclick="submitFeedback()">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-      Submit Feedback
-    </button>
+    <!-- STEP 3: Name (shown after DS office selected) -->
+    <div id="fb-step-3" style="display:none">
+      <div class="form-group">
+        <label>Step 3 — Your Name</label>
+        <select id="fb-name-select" onchange="fbOnNameSelect()">
+          <option value="">— Select Your Name —</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- STEP 4: Feedback text (shown after name selected) -->
+    <div id="fb-step-4" style="display:none">
+      <div class="form-group">
+        <label>Step 4 — Your Feedback</label>
+        <textarea id="fb-text" placeholder="Please share your thoughts, suggestions, or comments about the ceremony…" maxlength="1000"></textarea>
+        <div style="text-align:right;font-size:.72rem;color:var(--muted);margin-top:.3rem">
+          <span id="fb-char">0</span>/1000
+        </div>
+      </div>
+      <button class="btn btn-gold" id="btn-feedback" onclick="submitFeedback()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        Submit Feedback
+      </button>
+    </div>
   </div>
 </div>
 
-<!-- ══════ TAB: ADMIN ══════ -->
+<!-- ══════════════════════════════════════════
+     TAB: ADMIN
+══════════════════════════════════════════ -->
 <div class="tab-pane" id="tab-admin">
 
   <!-- Login Screen -->
@@ -545,12 +406,10 @@ tbody td{padding:.7rem .9rem;color:var(--cream);vertical-align:middle}
         <h2>Admin Access</h2>
         <p>Authorized personnel only</p>
       </div>
-
       <div class="alert alert-err" id="login-err">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
         Invalid username or password.
       </div>
-
       <div class="form-group">
         <label>Username</label>
         <input type="text" id="adm-user" placeholder="Enter username" autocomplete="off"/>
@@ -617,405 +476,1081 @@ tbody td{padding:.7rem .9rem;color:var(--cream);vertical-align:middle}
       <div id="district-stats"></div>
     </div>
 
-    <!-- Admin inner tabs: Attendance / Feedbacks -->
+    <!-- Admin inner tabs -->
     <div class="card" style="padding:1.2rem 1rem">
       <div class="admin-tabs">
-        <button class="admin-tab active" id="atab-attend" onclick="switchAdminTab('attend')">✅ Attendance List</button>
+        <button class="admin-tab active" id="atab-attend" onclick="switchAdminTab('attend')">✅ Attendance</button>
         <button class="admin-tab" id="atab-feedback" onclick="switchAdminTab('feedback')">💬 Feedbacks</button>
+        <button class="admin-tab" id="atab-manage" onclick="switchAdminTab('manage')">⚙️ Manage</button>
       </div>
 
-      <!-- Attendance table -->
+      <!-- ── Attendance List ── -->
       <div id="admin-attend-view">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:.8rem;flex-wrap:wrap;gap:.5rem">
           <span style="font-size:.82rem;color:var(--muted)" id="attend-count-lbl"></span>
-          <input class="search-input" type="search" id="tbl-search" placeholder="🔍 Search name…" oninput="filterTable()" style="max-width:180px"/>
+          <input class="search-input" type="search" id="tbl-search" placeholder="🔍 Search name, district…" oninput="filterTable()" style="max-width:200px"/>
         </div>
         <div class="table-wrap">
           <table>
             <thead>
               <tr>
-                <th>#</th>
-                <th>Name</th>
-                <th>District</th>
-                <th>DS Office</th>
-                <th>Status</th>
-                <th>Time</th>
+                <th>#</th><th>Name</th><th>District</th><th>DS Office</th><th>Status</th><th>Time</th>
               </tr>
             </thead>
             <tbody id="tbl-body"></tbody>
           </table>
         </div>
         <div class="empty-state" id="tbl-empty" style="display:none">
-          <div class="em-icon">📋</div>
-          No attendance records yet.
+          <div class="em-icon">📋</div>No attendance records yet.
         </div>
       </div>
 
-      <!-- Feedbacks view -->
+      <!-- ── Feedbacks ── -->
       <div id="admin-feedback-view" style="display:none">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:.8rem">
           <span style="font-size:.82rem;color:var(--muted)" id="fb-count-lbl"></span>
         </div>
         <div id="fb-list-wrap"></div>
         <div class="empty-state" id="fb-empty" style="display:none">
-          <div class="em-icon">💬</div>
-          No feedback submissions yet.
+          <div class="em-icon">💬</div>No feedback submissions yet.
         </div>
       </div>
+
+      <!-- ── Manage Officers ── -->
+      <div id="admin-manage-view" style="display:none">
+
+        <!-- Add new officer -->
+        <div style="margin-bottom:1.2rem">
+          <div class="section-label">➕ Add New Officer</div>
+          <div class="form-group">
+            <label>District</label>
+            <select id="mgmt-district" onchange="onMgmtDistrictChange()">
+              <option value="">— Select District —</option>
+              <!-- Dynamically populated -->
+            </select>
+          </div>
+          <div class="form-group">
+            <label>DS Office</label>
+            <select id="mgmt-dsoffice" disabled>
+              <option value="">— Select DS Office —</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" id="mgmt-name" placeholder="Enter officer's full name" onkeydown="if(event.key==='Enter')addNewOfficer()"/>
+          </div>
+          <button class="btn btn-gold" onclick="addNewOfficer()" style="margin-top:.3rem">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Add Officer
+          </button>
+        </div>
+
+        <!-- Officers list -->
+        <div>
+          <div class="section-label">👥 All Officers</div>
+          <input class="search-input" type="search" id="mgmt-search" placeholder="🔍 Filter officers…" oninput="renderOfficersList()" style="margin-bottom:.8rem"/>
+          <div id="officers-list"></div>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
 </div><!-- /content -->
 
-<!-- ══════ SUCCESS MODAL ══════ -->
+<!-- ══════════════════════════════════════════
+     MODAL: SUCCESS / INFO
+══════════════════════════════════════════ -->
 <div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
-  <div class="modal" id="modal-box">
+  <div class="modal">
     <div class="modal-icon" id="modal-icon">✅</div>
-    <h3 id="modal-title">Attendance Confirmed</h3>
-    <p id="modal-body">Your attendance has been successfully recorded.</p>
+    <h3 id="modal-title">Done</h3>
+    <p id="modal-body"></p>
     <button class="btn btn-gold" onclick="closeModalBtn()" style="width:auto;padding:.65rem 2rem">Done</button>
   </div>
 </div>
 
-<!-- ══════ CLEAR DATA MODAL ══════ -->
-<div class="modal-overlay modal-danger" id="clear-modal-overlay" onclick="closeClearModal(event)">
-  <div class="modal" id="clear-modal-box">
-    <div class="modal-icon">⚠️</div>
-    <h3 style="color:#ff8fa3">Clear All Attendance Data</h3>
-    <p>This will erase <strong>all attendance records and timestamps</strong> from the Google Sheet. Feedback will also be cleared.<br/><br/>Enter the admin password to confirm:</p>
-    <input class="modal-input" type="password" id="clear-pass-input" placeholder="Enter password" onkeydown="if(event.key==='Enter')confirmClear()"/>
-    <div id="clear-err" style="color:#ff8fa3;font-size:.8rem;margin-bottom:.6rem;display:none">❌ Wrong password</div>
-    <div style="display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap">
-      <button class="btn btn-danger-solid" onclick="confirmClear()" style="width:auto;padding:.65rem 1.6rem;background:linear-gradient(135deg,#f5365c,#e02244);color:#fff;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-weight:600;cursor:pointer;font-size:.95rem">Yes, Clear All</button>
-      <button class="btn btn-outline" onclick="closeClearModalBtn()" style="width:auto;padding:.65rem 1.6rem">Cancel</button>
+<!-- ══════════════════════════════════════════
+     MODAL: ADD OFFICER (from attendance dropdown)
+══════════════════════════════════════════ -->
+<div class="modal-overlay" id="add-officer-overlay" onclick="closeAddOfficerModal(event)">
+  <div class="modal modal-compact">
+    <div style="font-size:2rem;margin-bottom:.6rem">➕</div>
+    <h3 style="margin-bottom:.3rem">Add New Officer</h3>
+    <p style="margin-bottom:1rem">Adding to: <strong id="add-officer-ctx" style="color:var(--gold2)"></strong></p>
+    <div class="form-group" style="text-align:left">
+      <label>Officer Full Name</label>
+      <input type="text" id="add-officer-name-input" placeholder="Enter full name" onkeydown="if(event.key==='Enter')confirmAddOfficerFromDropdown()"/>
+    </div>
+    <div style="display:flex;gap:.7rem;justify-content:center;margin-top:.5rem">
+      <button class="btn btn-outline" onclick="closeAddOfficerModal()" style="width:auto;padding:.6rem 1.4rem">Cancel</button>
+      <button class="btn btn-gold" onclick="confirmAddOfficerFromDropdown()" style="width:auto;padding:.6rem 1.4rem">Add</button>
     </div>
   </div>
 </div>
 
-<script>
-const API = 'https://script.google.com/macros/s/AKfycbxit4AF5fW2gFrTXmKfO9-47z6ZY52UA2uC_wvEc13HYAvo6lRJOBBJcJvJPBOScIPI/exec';
-let allData = [];
+<!-- ══════════════════════════════════════════
+     MODAL: CLEAR DATA (multi-step)
+══════════════════════════════════════════ -->
+<div class="modal-overlay" id="clear-modal-overlay" onclick="closeClearModal(event)">
+  <div class="modal modal-wide">
 
-/* ── UTILITIES ── */
-function loading(on){document.getElementById('loadBar').classList.toggle('show',on)}
-function showModal(icon,title,body){
-  document.getElementById('modal-icon').textContent=icon;
-  document.getElementById('modal-title').textContent=title;
-  document.getElementById('modal-body').innerHTML=body;
+    <!-- STEP 1: Choose scope -->
+    <div id="clear-s1">
+      <div class="modal-icon" style="font-size:2.2rem;text-align:center">⚠️</div>
+      <h3 class="clear-section-title" style="text-align:center;margin-bottom:.3rem">Clear Attendance Data</h3>
+      <p style="font-size:.82rem;color:var(--muted);margin-bottom:1rem;text-align:center">Select the scope to clear. All clear operations require the admin password.</p>
+
+      <button class="clear-opt-btn" onclick="clearInitScope('all_districts')">
+        🗑️ <span><strong>Clear All Districts</strong><br/><small style="color:var(--muted);font-weight:400">Clears attendance & feedback for all officers</small></span>
+      </button>
+
+      <!-- Dynamically generated district clear buttons will go here -->
+      <div id="clear-dynamic-dists"></div>
+
+      <button class="clear-opt-btn danger-opt" onclick="clearInitScope('everything')">
+        ⚠️ <span><strong>Clear Everything</strong><br/><small style="font-weight:400">Clears ALL data including anonymous feedback rows</small></span>
+      </button>
+      <button class="btn btn-outline" onclick="closeClearModalBtn()" style="margin-top:.4rem">Cancel</button>
+    </div>
+
+    <!-- STEP 2: DS Office selector (district-specific only) -->
+    <div id="clear-s2" style="display:none">
+      <button class="clear-back-btn" onclick="clearGoToStep(1)">← Back</button>
+      <h3 class="clear-section-title">Select DS Office</h3>
+      <p style="font-size:.82rem;color:var(--muted);margin-bottom:.8rem">Leave as "Entire District" to clear all offices, or pick a specific one.</p>
+      <div class="form-group">
+        <label>DS Office — <span id="clear-district-label" style="color:var(--gold2)"></span></label>
+        <select id="clear-dso-select">
+          <option value="">— Entire District —</option>
+        </select>
+      </div>
+      <button class="btn btn-gold" onclick="clearGoToStep(3)" style="margin-top:.5rem">Next →</button>
+    </div>
+
+    <!-- STEP 3: Password + confirm -->
+    <div id="clear-s3" style="display:none">
+      <button class="clear-back-btn" id="clear-s3-back" onclick="clearGoToStep(2)">← Back</button>
+      <div style="text-align:center;margin-bottom:.8rem">
+        <div style="font-size:2rem;margin-bottom:.4rem">🔐</div>
+        <h3 class="clear-section-title">Confirm Clear</h3>
+        <div class="clear-confirm-tag" id="clear-scope-tag"></div>
+        <p style="font-size:.82rem;color:var(--muted);margin-top:.5rem">Enter the admin password to proceed. This action cannot be undone.</p>
+      </div>
+      <input class="modal-input" type="password" id="clear-pass-input" placeholder="Enter admin password" onkeydown="if(event.key==='Enter')executeClear()"/>
+      <div id="clear-err" style="color:#ff8fa3;font-size:.8rem;margin-bottom:.5rem;display:none;text-align:center">❌ Wrong password. Try again.</div>
+      <div style="display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap">
+        <button onclick="executeClear()" style="width:auto;padding:.65rem 1.6rem;background:linear-gradient(135deg,#f5365c,#e02244);color:#fff;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-weight:600;cursor:pointer;font-size:.92rem;box-shadow:0 4px 18px rgba(245,54,92,0.4)">
+          🗑 Confirm Clear
+        </button>
+        <button class="btn btn-outline" onclick="closeClearModalBtn()" style="width:auto;padding:.65rem 1.4rem">Cancel</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     JAVASCRIPT
+══════════════════════════════════════════ -->
+<script>
+// ─────────────────────────────────────────
+// CONFIG
+// ─────────────────────────────────────────
+const API = 'https://script.google.com/macros/s/AKfycbxit4AF5fW2gFrTXmKfO9-47z6ZY52UA2uC_wvEc13HYAvo6lRJOBBJcJvJPBOScIPI/exec';
+const ADMIN_USER = 'pfund';
+const ADMIN_PASS = 'pfundrem';
+const CLEAR_PASS = 'pfundrem';
+
+// ─────────────────────────────────────────
+// STATE
+// ─────────────────────────────────────────
+let allData      = [];  // everything from sheet
+let officersData = [];  // real officers only (district != "")
+let isLoggedIn   = false;
+
+// Clear modal state
+let clearState = { scope: '', district: '', dsOffice: '' };
+
+// Add-officer-from-dropdown context
+let addOfficerCtx = { district: '', dsOffice: '' };
+
+// Officers added this session — persists across backend refreshes so the
+// admin panel always shows them even if the backend hasn't saved them yet
+let locallyAddedOfficers = [];
+
+// Feedback state
+let fbState = { district: '', dsOffice: '', name: '' };
+
+// ─────────────────────────────────────────
+// UTILITIES
+// ─────────────────────────────────────────
+function loading(on) { document.getElementById('loadBar').classList.toggle('show', on); }
+function uniqueSorted(arr) { return [...new Set(arr)].filter(Boolean).sort(); }
+function escHtml(s) { return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function escapeJsQuote(s) { return String(s||'').replace(/'/g, "\\'"); }
+
+// Safe API call with CORS fallback & Cache-busting
+async function apiCall(url, needsResponse = true) {
+  const finalUrl = url + `&_t=${Date.now()}`; // Prevent browser from caching old data
+  if (needsResponse) {
+    const res = await fetch(finalUrl);
+    return res.json();
+  } else {
+    try {
+      const res = await fetch(finalUrl);
+      return res.json();
+    } catch {
+      await fetch(finalUrl, { method: 'GET', mode: 'no-cors' });
+      return { status: 'ok' };
+    }
+  }
+}
+
+// ─────────────────────────────────────────
+// MODAL (info/success)
+// ─────────────────────────────────────────
+function showModal(icon, title, body) {
+  document.getElementById('modal-icon').textContent = icon;
+  document.getElementById('modal-title').textContent = title;
+  document.getElementById('modal-body').innerHTML = body;
   document.getElementById('modal-overlay').classList.add('show');
 }
-function closeModal(e){if(e.target===document.getElementById('modal-overlay'))closeModalBtn()}
-function closeModalBtn(){document.getElementById('modal-overlay').classList.remove('show')}
+function closeModal(e) { if (e.target === document.getElementById('modal-overlay')) closeModalBtn(); }
+function closeModalBtn() { document.getElementById('modal-overlay').classList.remove('show'); }
 
-/* ── TABS ── */
-function switchTab(id,btn){
-  document.querySelectorAll('.tab-pane').forEach(p=>p.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
-  document.getElementById('tab-'+id).classList.add('active');
+// ─────────────────────────────────────────
+// TABS
+// ─────────────────────────────────────────
+function switchTab(id, btn) {
+  document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
   btn.classList.add('active');
-  if(id==='admin' && isLoggedIn) refreshDashboard();
+  if (id === 'admin' && isLoggedIn) {
+    // Render immediately from local state so locally-added officers show at once,
+    // then fetch fresh backend data in the background (merged with local additions)
+    renderDashboard();
+    refreshDashboard();
+  }
 }
 
-/* ── DATA FETCH ── */
-async function loadData(){
+// ─────────────────────────────────────────
+// DATA LOADING
+// ─────────────────────────────────────────
+async function loadData() {
   loading(true);
-  document.getElementById('data-status').style.display='flex';
-  document.getElementById('data-status').innerHTML='<span style="color:var(--gold)">⏳ Loading officer data…</span>';
-  try{
-    const r = await fetch(`${API}?action=get_data`);
-    allData = await r.json();
-    if(Array.isArray(allData) && allData.length>0){
-      document.getElementById('data-status').innerHTML=`<span style="color:var(--success)">✅ ${allData.length} officers loaded</span>`;
-      setTimeout(()=>{document.getElementById('data-status').style.display='none'},3000);
+  const status = document.getElementById('data-status');
+  status.style.display = 'flex';
+  status.innerHTML = '<span style="color:var(--gold)">⏳ Loading officer data…</span>';
+  try {
+    const r = await fetch(`${API}?action=get_data&_t=${Date.now()}`); // Cache busting
+    const raw = await r.json();
+    allData = Array.isArray(raw) ? raw : [];
+
+    // Real officers only = rows where district is not empty
+    officersData = allData.filter(d => d.district && d.district.toString().trim() !== '');
+
+    if (officersData.length > 0) {
+      status.innerHTML = `<span style="color:var(--success)">✅ ${officersData.length} officers loaded</span>`;
+      setTimeout(() => { status.style.display = 'none'; }, 3000);
     } else {
-      document.getElementById('data-status').innerHTML='<span style="color:#ff8fa3">⚠️ Data empty — check Apps Script code</span>';
+      status.innerHTML = '<span style="color:#ff8fa3">⚠️ No data — check Apps Script deployment</span>';
     }
-  }catch(e){
-    document.getElementById('data-status').innerHTML='<span style="color:#ff8fa3">❌ Failed to load data — check Apps Script deployment (Anyone access)</span>';
-    console.error('Data load failed:',e);
+  } catch (e) {
+    status.innerHTML = '<span style="color:#ff8fa3">❌ Failed to load — check Apps Script URL and access settings</span>';
+    console.error('Data load failed:', e);
   }
   loading(false);
-  populateDistricts();
-  populateFeedbackNames();
+  populateDistrictDropdown();
+  if (isLoggedIn) renderDashboard();
 }
 
-function uniqueSorted(arr){return [...new Set(arr)].filter(Boolean).sort()}
+// ─────────────────────────────────────────
+// DYNAMIC POPULATION (Dropdowns & Pills)
+// ─────────────────────────────────────────
+function populateDistrictDropdown() {
+  const dists = uniqueSorted(officersData.map(d => d.district?.trim()));
 
-function populateDistricts(){
-  const sel=document.getElementById('sel-district');
-  const districts=uniqueSorted(allData.map(d=>d.district?.trim()));
-  districts.forEach(d=>{const o=new Option(d,d);sel.add(o)});
+  // 1. Mark Attendance Dropdown
+  const sel = document.getElementById('sel-district');
+  const cur = sel.value;
+  sel.innerHTML = '<option value="">— Select District —</option>';
+  dists.forEach(dist => sel.add(new Option(dist, dist)));
+  if (cur) {
+    sel.value = cur;
+    // Re-sync office & name dropdowns so removing/adding officers is immediately
+    // reflected without requiring the user to re-select the district manually.
+    if (sel.value === cur) {
+      const offSel = document.getElementById('sel-office');
+      const offCur = offSel.value;
+      if (offCur && !offSel.disabled) {
+        const offices = uniqueSorted(officersData.filter(d=>(d.district||'').trim()===cur).map(d=>d.ds_office?.trim()));
+        offSel.innerHTML = '<option value="">— Select DS Office —</option>';
+        offices.forEach(o => offSel.add(new Option(o, o)));
+        offSel.disabled = false;
+        offSel.value = offCur;
+        if (offSel.value === offCur) {
+          // Office still exists — also refresh name dropdown
+          const namSel = document.getElementById('sel-name');
+          const namCur = namSel.value;
+          if (!namSel.disabled && namCur && namCur !== '__add_new__') {
+            const names = officersData
+              .filter(d=>(d.district||'').trim()===cur && (d.ds_office||'').trim()===offCur)
+              .map(d=>d.name?.trim()).filter(n=>n).sort();
+            namSel.innerHTML = '<option value="">— Select Name —</option>';
+            names.forEach(n => namSel.add(new Option(n, n)));
+            namSel.add(new Option('➕ Add New Officer', '__add_new__'));
+            namSel.disabled = false;
+            namSel.value = namCur;
+            // If the previously-selected name was just removed, disable the attend button
+            document.getElementById('btn-attend').disabled = !namSel.value || namSel.value === '__add_new__';
+          }
+        }
+      }
+    }
+  }
+
+  // 2. Feedback District Pills
+  const fbPills = document.getElementById('fb-district-pills');
+  if (fbPills) {
+    fbPills.innerHTML = ''; 
+    dists.forEach(dist => {
+      const btn = document.createElement('button');
+      btn.className = 'pill-btn';
+      btn.textContent = '📍 ' + dist;
+      btn.onclick = function() { fbSelectDistrict(dist, this); };
+      fbPills.appendChild(btn);
+    });
+    const anonBtn = document.createElement('button');
+    anonBtn.className = 'pill-btn';
+    anonBtn.textContent = '🔒 Anonymous';
+    anonBtn.onclick = function() { fbSelectDistrict('__anon__', this); };
+    fbPills.appendChild(anonBtn);
+  }
+
+  // 3. Admin Manage Officer Dropdown
+  const mgmtSel = document.getElementById('mgmt-district');
+  if (mgmtSel) {
+    const mgmtCur = mgmtSel.value;
+    mgmtSel.innerHTML = '<option value="">— Select District —</option>';
+    dists.forEach(dist => mgmtSel.add(new Option(dist, dist)));
+    if (mgmtCur) mgmtSel.value = mgmtCur;
+  }
+
+  // 4. Admin Clear Data Modal Buttons
+  const clearOpts = document.getElementById('clear-dynamic-dists');
+  if (clearOpts) {
+    clearOpts.innerHTML = dists.map(dist => `
+      <button class="clear-opt-btn" onclick="clearInitScope('${escapeJsQuote(dist)}')">
+        📍 <span><strong>Clear ${escHtml(dist)} District</strong><br/><small style="color:var(--muted);font-weight:400">Select specific DS Office or entire district</small></span>
+      </button>
+    `).join('');
+  }
 }
 
-function onDistrictChange(){
-  const dist=document.getElementById('sel-district').value;
-  const offSel=document.getElementById('sel-office');
-  const namSel=document.getElementById('sel-name');
-  offSel.innerHTML='<option value="">— Select DS Office —</option>';
-  namSel.innerHTML='<option value="">— Select Name —</option>';
-  offSel.disabled=true; namSel.disabled=true;
-  document.getElementById('btn-attend').disabled=true;
-  if(!dist)return;
-  const offices=uniqueSorted(allData.filter(d=>d.district?.trim()===dist).map(d=>d.ds_office?.trim()));
-  offices.forEach(o=>{offSel.add(new Option(o,o))});
-  offSel.disabled=false;
+// ─────────────────────────────────────────
+// ATTENDANCE TAB
+// ─────────────────────────────────────────
+function onDistrictChange() {
+  const dist = document.getElementById('sel-district').value;
+  const offSel = document.getElementById('sel-office');
+  const namSel = document.getElementById('sel-name');
+  offSel.innerHTML = '<option value="">— Select DS Office —</option>';
+  namSel.innerHTML = '<option value="">— Select Name —</option>';
+  offSel.disabled = true; namSel.disabled = true;
+  document.getElementById('btn-attend').disabled = true;
+  if (!dist) return;
+  const offices = uniqueSorted(officersData.filter(d => (d.district || '').trim() === dist).map(d => d.ds_office?.trim()));
+  offices.forEach(o => offSel.add(new Option(o, o)));
+  offSel.disabled = false;
 }
 
-function onOfficeChange(){
-  const dist=document.getElementById('sel-district').value;
-  const office=document.getElementById('sel-office').value;
-  const namSel=document.getElementById('sel-name');
-  namSel.innerHTML='<option value="">— Select Name —</option>';
-  namSel.disabled=true;
-  document.getElementById('btn-attend').disabled=true;
-  if(!office)return;
-  const names=allData.filter(d=>d.district?.trim()===dist&&d.ds_office?.trim()===office).map(d=>d.name?.trim()).filter(Boolean).sort();
-  names.forEach(n=>{namSel.add(new Option(n,n))});
-  namSel.disabled=false;
-  namSel.addEventListener('change',()=>{
-    document.getElementById('btn-attend').disabled=!namSel.value;
-  },{once:false});
+function onOfficeChange() {
+  const dist   = document.getElementById('sel-district').value;
+  const office = document.getElementById('sel-office').value;
+  const namSel = document.getElementById('sel-name');
+  namSel.innerHTML = '<option value="">— Select Name —</option>';
+  namSel.disabled = true;
+  document.getElementById('btn-attend').disabled = true;
+  if (!office) return;
+
+  const names = officersData
+    .filter(d => (d.district || '').trim() === dist && (d.ds_office || '').trim() === office)
+    .map(d => d.name?.trim())
+    .filter(n => n) // Test data filtering removed, everything shows
+    .sort();
+
+  names.forEach(n => namSel.add(new Option(n, n)));
+
+  const addOpt = new Option('➕ Add New Officer', '__add_new__');
+  namSel.add(addOpt);
+
+  namSel.disabled = false;
 }
 
-/* ── ATTENDANCE ── */
-async function markAttendance(){
-  const name=document.getElementById('sel-name').value;
-  if(!name)return;
-  const btn=document.getElementById('btn-attend');
-  btn.disabled=true;
-  btn.innerHTML='<span class="spinner"></span> Recording…';
+function onNameChange() {
+  const sel = document.getElementById('sel-name');
+  if (sel.value === '__add_new__') {
+    sel.value = '';
+    document.getElementById('btn-attend').disabled = true;
+    const dist   = document.getElementById('sel-district').value;
+    const office = document.getElementById('sel-office').value;
+    openAddOfficerFromDropdown(dist, office);
+    return;
+  }
+  document.getElementById('btn-attend').disabled = !sel.value;
+}
+
+async function markAttendance() {
+  const name = document.getElementById('sel-name').value;
+  if (!name || name === '__add_new__') return;
+
+  const existing = officersData.find(d => d.name?.trim() === name);
+  if (existing && existing.status && existing.status.toString().trim() !== '') {
+    showModal('ℹ️', 'Already Recorded', `<span class="person-name">${name}</span><br/><br/>Attendance has already been marked for this officer.`);
+    return;
+  }
+
+  const btn = document.getElementById('btn-attend');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span> Recording…';
   loading(true);
-  try{
-    // GET + no-cors: request reaches GAS, we can't read response — that's OK
-    await fetch(`${API}?action=attendance&name=${encodeURIComponent(name)}`,{method:'GET',mode:'no-cors'});
-    showModal('🎉','Attendance Confirmed!',`<span class="person-name">${name}</span><br/><br/>Your attendance has been successfully recorded. Welcome to the President's Fund Award Ceremony!`);
-    document.getElementById('sel-district').value='';
-    document.getElementById('sel-office').innerHTML='<option value="">— Select DS Office —</option>';
-    document.getElementById('sel-office').disabled=true;
-    document.getElementById('sel-name').innerHTML='<option value="">— Select Name —</option>';
-    document.getElementById('sel-name').disabled=true;
-    document.getElementById('btn-attend').disabled=true;
-  }catch(e){
-    showModal('⚠️','Network Error','Unable to reach the server. Please check your internet connection.');
+
+  try {
+    await apiCall(`${API}?action=attendance&name=${encodeURIComponent(name)}`, false);
+    
+    // Optimistic UI Update: Instantly show Present without waiting
+    const now = new Date();
+    const timeStr = now.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
+    
+    if (existing) {
+      existing.status = 'Present';
+      existing.time = timeStr;
+    }
+    
+    // Keep locallyAddedOfficers in sync so the 'Present' status survives a refresh
+    const localEntry = locallyAddedOfficers.find(o => o.name?.trim() === name.trim());
+    if (localEntry) {
+      localEntry.status = 'Present';
+      localEntry.time = timeStr;
+    }
+
+    showModal('🎉', 'Attendance Confirmed!', `<span class="person-name">${name}</span><br/><br/>Your attendance has been successfully recorded. Welcome to the President's Fund Award Ceremony!`);
+    
+    document.getElementById('sel-district').value = '';
+    document.getElementById('sel-office').innerHTML = '<option value="">— Select DS Office —</option>';
+    document.getElementById('sel-office').disabled = true;
+    document.getElementById('sel-name').innerHTML = '<option value="">— Select Name —</option>';
+    document.getElementById('sel-name').disabled = true;
+    
+    if (isLoggedIn) renderDashboard();
+    
+  } catch (e) {
+    showModal('⚠️', 'Network Error', 'Unable to reach the server. Please check your internet connection and try again.');
   }
+
   loading(false);
-  btn.disabled=false;
-  btn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18"><path d="M5 13l4 4L19 7"/></svg>Confirm Attendance';
+  // After success the name dropdown is cleared so button must stay disabled.
+  // After a network error the name is still selected so we re-enable for retry.
+  btn.disabled = !document.getElementById('sel-name').value;
+  btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18"><path d="M5 13l4 4L19 7"/></svg> Confirm Attendance';
 }
 
-/* ── FEEDBACK NAMES ── */
-function populateFeedbackNames(){
-  const dl=document.getElementById('fb-names-list');
-  dl.innerHTML='';
-  uniqueSorted(allData.map(d=>d.name?.trim())).forEach(n=>{
-    const opt=document.createElement('option');opt.value=n;dl.appendChild(opt);
-  });
+// ─────────────────────────────────────────
+// ADD OFFICER FROM DROPDOWN MODAL
+// ─────────────────────────────────────────
+function openAddOfficerFromDropdown(district, dsOffice) {
+  addOfficerCtx = { district, dsOffice };
+  document.getElementById('add-officer-ctx').textContent = `${district} → ${dsOffice}`;
+  document.getElementById('add-officer-name-input').value = '';
+  document.getElementById('add-officer-overlay').classList.add('show');
+  setTimeout(() => document.getElementById('add-officer-name-input').focus(), 200);
 }
 
-// char counter
-document.getElementById('fb-text').addEventListener('input',function(){
-  document.getElementById('fb-char').textContent=this.value.length;
+function closeAddOfficerModal(e) {
+  if (!e || e.target === document.getElementById('add-officer-overlay')) {
+    document.getElementById('add-officer-overlay').classList.remove('show');
+  }
+}
+
+async function confirmAddOfficerFromDropdown() {
+  const name = document.getElementById('add-officer-name-input').value.trim();
+  if (!name) return;
+  closeAddOfficerModal();
+  
+  try {
+    loading(true);
+    // 1. Add officer silently (Total +1)
+    await doAddOfficer(name, addOfficerCtx.district, addOfficerCtx.dsOffice, true);
+    
+    // 2. Select in Dropdowns
+    const selDist = document.getElementById('sel-district');
+    selDist.value = addOfficerCtx.district;
+    onDistrictChange();
+    
+    const selOff = document.getElementById('sel-office');
+    selOff.value = addOfficerCtx.dsOffice;
+    onOfficeChange();
+    
+    const namSel = document.getElementById('sel-name');
+    namSel.value = name;
+    document.getElementById('btn-attend').disabled = false;
+    
+    loading(false);
+    // 3. Auto-mark as Present (Present +1)
+    await markAttendance();
+  } catch (e) {
+    loading(false);
+  }
+}
+
+// ─────────────────────────────────────────
+// FEEDBACK TAB (cascading district → office → name)
+// ─────────────────────────────────────────
+document.getElementById('fb-text').addEventListener('input', function () {
+  document.getElementById('fb-char').textContent = this.value.length;
 });
 
-function onFbNameInput(){/* live, no extra logic needed */}
-
-/* ── FEEDBACK SUBMIT ── */
-async function submitFeedback(){
-  const name=document.getElementById('fb-name-input').value.trim();
-  const text=document.getElementById('fb-text').value.trim();
-  if(!text){showModal('⚠️','Missing Feedback','Please enter your feedback before submitting.');return;}
-  const btn=document.getElementById('btn-feedback');
-  btn.disabled=true;
-  btn.innerHTML='<span class="spinner"></span> Submitting…';
-  loading(true);
-  // GAS write ops use no-cors — redirect breaks regular CORS fetch for writes
-  try{
-    await fetch(`${API}?action=feedback&name=${encodeURIComponent(name||'Anonymous')}&feedback=${encodeURIComponent(text)}`,{method:'GET',mode:'no-cors'});
-  }catch(e){}
-  // Optimistic success — no-cors fire-and-forget always "succeeds" if network is up
-  loading(false);
-  showModal('💬','Thank You!','Your feedback has been submitted successfully. We appreciate your valuable input!');
-  document.getElementById('fb-name-input').value='';
-  document.getElementById('fb-text').value='';
-  document.getElementById('fb-char').textContent='0';
-  btn.disabled=false;
-  btn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>Submit Feedback';
+function fbUpdateStepDots(activeStep) {
+  for (let i = 1; i <= 4; i++) {
+    const dot = document.getElementById('fbsdot-' + i);
+    dot.classList.remove('active', 'done');
+    if (i < activeStep)  dot.classList.add('done');
+    if (i === activeStep) dot.classList.add('active');
+  }
 }
 
-/* ── ADMIN ── */
-let isLoggedIn=false;
-function doLogin(){
-  const u=document.getElementById('adm-user').value.trim();
-  const p=document.getElementById('adm-pass').value;
-  const err=document.getElementById('login-err');
-  if(u==='pfund'&&p==='pfundrem'){
+function fbSelectDistrict(district, btn) {
+  fbState = { district, dsOffice: '', name: '' };
+
+  document.querySelectorAll('#fb-district-pills .pill-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  document.getElementById('fb-step-2').style.display = 'none';
+  document.getElementById('fb-step-3').style.display = 'none';
+  document.getElementById('fb-step-4').style.display = 'none';
+
+  if (district === '__anon__') {
+    const nameSel = document.getElementById('fb-name-select');
+    nameSel.innerHTML = '<option value="Anonymous">Submit Anonymously</option>';
+    fbState.name = 'Anonymous';
+    document.getElementById('fb-step-4').style.display = 'block';
+    fbUpdateStepDots(4);
+    return;
+  }
+
+  const offPills = document.getElementById('fb-office-pills');
+  offPills.innerHTML = '';
+  const offices = uniqueSorted(officersData
+      .filter(d => (d.district || '').trim() === district)
+      .map(d => d.ds_office?.trim())
+  );
+  offices.forEach(off => {
+    const btn2 = document.createElement('button');
+    btn2.className = 'pill-btn';
+    btn2.textContent = off;
+    btn2.onclick = () => fbSelectOffice(off, btn2);
+    offPills.appendChild(btn2);
+  });
+
+  document.getElementById('fb-step-2').style.display = 'block';
+  fbUpdateStepDots(2);
+}
+
+function fbSelectOffice(office, btn) {
+  fbState.dsOffice = office;
+
+  document.querySelectorAll('#fb-office-pills .pill-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  const nameSel = document.getElementById('fb-name-select');
+  nameSel.innerHTML = '<option value="">— Select Your Name —</option>';
+
+  const names = officersData
+    .filter(d => (d.district || '').trim() === fbState.district && 
+                 (d.ds_office || '').trim() === office)
+    .map(d => d.name?.trim())
+    .filter(n => n)
+    .sort();
+
+  names.forEach(n => nameSel.add(new Option(n, n)));
+  nameSel.add(new Option('🔒 Submit Anonymously', 'Anonymous'));
+
+  document.getElementById('fb-step-3').style.display = 'block';
+  document.getElementById('fb-step-4').style.display = 'none';
+  fbUpdateStepDots(3);
+}
+
+function fbOnNameSelect() {
+  const sel = document.getElementById('fb-name-select');
+  fbState.name = sel.value;
+  if (fbState.name) {
+    document.getElementById('fb-step-4').style.display = 'block';
+    fbUpdateStepDots(4);
+  } else {
+    document.getElementById('fb-step-4').style.display = 'none';
+  }
+}
+
+async function submitFeedback() {
+  const name = document.getElementById('fb-name-select').value || 'Anonymous';
+  const text = document.getElementById('fb-text').value.trim();
+  if (!text) { showModal('⚠️', 'Missing Feedback', 'Please enter your feedback before submitting.'); return; }
+
+  const btn = document.getElementById('btn-feedback');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span> Submitting…';
+  loading(true);
+
+  try {
+    await apiCall(`${API}?action=feedback&name=${encodeURIComponent(name)}&feedback=${encodeURIComponent(text)}`, false);
+    
+    const now = new Date();
+    const timeStr = now.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
+
+    if (name === 'Anonymous') {
+        allData.push({
+            name: 'Anonymous',
+            district: fbState.district !== '__anon__' ? fbState.district : '',
+            ds_office: fbState.dsOffice,
+            feedback: text,
+            time: timeStr
+        });
+    } else {
+        const existing = allData.find(d => d.name?.trim() === name);
+        if (existing) {
+            existing.feedback = text;
+            if (!existing.time) existing.time = timeStr;
+        }
+    }
+
+    showModal('💬', 'Thank You!', 'Your feedback has been submitted successfully. We appreciate your valuable input!');
+    
+    document.getElementById('fb-text').value = '';
+    document.getElementById('fb-char').textContent = '0';
+    document.getElementById('fb-step-2').style.display = 'none';
+    document.getElementById('fb-step-3').style.display = 'none';
+    document.getElementById('fb-step-4').style.display = 'none';
+    document.querySelectorAll('.pill-btn').forEach(b => b.classList.remove('active'));
+    fbUpdateStepDots(1);
+    fbState = { district: '', dsOffice: '', name: '' };
+    
+    if (isLoggedIn) renderDashboard();
+  } catch (e) {
+    showModal('⚠️', 'Error', 'Could not submit feedback. Please check your connection.');
+  }
+
+  loading(false);
+  btn.disabled = false;
+  btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>Submit Feedback';
+}
+
+// ─────────────────────────────────────────
+// ADMIN LOGIN / LOGOUT
+// ─────────────────────────────────────────
+function doLogin() {
+  const u = document.getElementById('adm-user').value.trim();
+  const p = document.getElementById('adm-pass').value;
+  const err = document.getElementById('login-err');
+  if (u === ADMIN_USER && p === ADMIN_PASS) {
     err.classList.remove('show');
-    isLoggedIn=true;
-    document.getElementById('login-screen').style.display='none';
-    document.getElementById('dashboard-screen').style.display='block';
+    isLoggedIn = true;
+    document.getElementById('login-screen').style.display = 'none';
+    document.getElementById('dashboard-screen').style.display = 'block';
     refreshDashboard();
-  }else{
+  } else {
     err.classList.add('show');
   }
 }
-function doLogout(){
-  isLoggedIn=false;
-  document.getElementById('login-screen').style.display='block';
-  document.getElementById('dashboard-screen').style.display='none';
-  document.getElementById('adm-user').value='';
-  document.getElementById('adm-pass').value='';
+
+function doLogout() {
+  isLoggedIn = false;
+  document.getElementById('login-screen').style.display = 'block';
+  document.getElementById('dashboard-screen').style.display = 'none';
+  document.getElementById('adm-user').value = '';
+  document.getElementById('adm-pass').value = '';
 }
 
-/* Admin inner tabs */
-function switchAdminTab(tab){
-  document.getElementById('admin-attend-view').style.display= tab==='attend'?'block':'none';
-  document.getElementById('admin-feedback-view').style.display= tab==='feedback'?'block':'none';
-  document.getElementById('atab-attend').classList.toggle('active', tab==='attend');
-  document.getElementById('atab-feedback').classList.toggle('active', tab==='feedback');
+// ─────────────────────────────────────────
+// ADMIN INNER TABS
+// ─────────────────────────────────────────
+function switchAdminTab(tab) {
+  ['attend', 'feedback', 'manage'].forEach(t => {
+    document.getElementById('admin-' + t + '-view').style.display = t === tab ? 'block' : 'none';
+    document.getElementById('atab-' + t).classList.toggle('active', t === tab);
+  });
+  if (tab === 'manage') renderOfficersList();
+  if (tab === 'feedback') renderFeedbacks(allData);
+  if (tab === 'attend') filterTable();
 }
 
-async function refreshDashboard(){
-  if(!isLoggedIn)return;
+// ─────────────────────────────────────────
+// DASHBOARD
+// ─────────────────────────────────────────
+async function refreshDashboard() {
+  if (!isLoggedIn) return;
   loading(true);
-  try{
-    const r=await fetch(`${API}?action=get_data`);
-    allData=await r.json();
-  }catch(e){console.warn(e)}
+  try {
+    const r = await fetch(`${API}?action=get_data&_t=${Date.now()}`); // Cache bust
+    const raw = await r.json();
+    allData = Array.isArray(raw) ? raw : [];
+    officersData = allData.filter(d => d.district && d.district.toString().trim() !== '');
+    
+    // Merge any locally-added officers that the backend hasn't saved yet.
+    // This prevents the count from reverting to the old total on refresh.
+    const backendNames = new Set(officersData.map(d => d.name?.trim()).filter(Boolean));
+    locallyAddedOfficers.forEach(local => {
+      if (!backendNames.has(local.name?.trim())) {
+        allData.push(local);
+        officersData.push(local);
+      }
+    });
+    
+    populateDistrictDropdown();
+  } catch (e) { console.warn(e); }
   loading(false);
   renderDashboard();
 }
 
-function renderDashboard(){
-  const total=allData.length;
-  const present=allData.filter(d=>d.status&&d.status.toString().trim()!=='').length;
-  const pct=total?Math.round(present/total*100):0;
+function renderDashboard() {
+  const total   = officersData.length;
+  const present = officersData.filter(d => d.status && d.status.toString().trim() !== '').length;
+  const pct     = total ? Math.round(present / total * 100) : 0;
 
-  document.getElementById('stat-present').textContent=present;
-  document.getElementById('stat-total').textContent=total;
-  document.getElementById('stat-pct').textContent=pct+'%';
+  document.getElementById('stat-present').textContent = present;
+  document.getElementById('stat-total').textContent   = total;
+  document.getElementById('stat-pct').textContent     = pct + '%';
 
-  const fill=document.getElementById('prog-fill');
-  const lbl=document.getElementById('prog-pct-label');
-  setTimeout(()=>{fill.style.width=pct+'%'},50);
-  lbl.textContent=pct+'%';
-  document.getElementById('prog-sub').textContent=`${present} of ${total} officers have checked in`;
-  document.getElementById('prog-absent-lbl').textContent=`${total-present} pending`;
+  setTimeout(() => {
+    document.getElementById('prog-fill').style.width = pct + '%';
+  }, 50);
+  document.getElementById('prog-pct-label').textContent  = pct + '%';
+  document.getElementById('prog-sub').textContent         = `${present} of ${total} officers have checked in`;
+  document.getElementById('prog-absent-lbl').textContent  = `${total - present} pending`;
 
-  /* District breakdown */
-  const distMap={};
-  allData.forEach(d=>{
-    const dist=d.district?.trim()||'Unknown';
-    if(!distMap[dist])distMap[dist]={total:0,present:0};
-    distMap[dist].total++;
-    if(d.status&&d.status.toString().trim()!=='')distMap[dist].present++;
-  });
-  document.getElementById('district-stats').innerHTML=Object.entries(distMap).map(([dist,v])=>{
-    const dp=v.total?Math.round(v.present/v.total*100):0;
-    return `<div style="margin-bottom:.8rem">
+  renderDistrictBreakdown();
+  renderTable(officersData);
+  renderFeedbacks(allData);
+}
+
+function renderDistrictBreakdown() {
+  const districts = uniqueSorted(officersData.map(d => d.district?.trim()));
+  document.getElementById('district-stats').innerHTML = districts.map(dist => {
+    const grp     = officersData.filter(d => d.district?.trim() === dist);
+    const present = grp.filter(d => d.status && d.status.toString().trim() !== '').length;
+    const total   = grp.length;
+    const dp      = total ? Math.round(present / total * 100) : 0;
+    return `<div style="margin-bottom:.9rem">
       <div style="display:flex;justify-content:space-between;font-size:.8rem;margin-bottom:.3rem">
-        <span style="color:var(--cream)">${dist}</span>
-        <span style="color:var(--gold2);font-weight:600">${v.present}/${v.total}</span>
+        <span style="color:var(--cream)">${escHtml(dist)}</span>
+        <span style="color:var(--gold2);font-weight:600">${present}/${total} &nbsp;<span style="color:var(--muted);font-weight:400">${dp}%</span></span>
       </div>
       <div class="prog-bar"><div class="prog-fill" style="width:${dp}%"></div></div>
     </div>`;
   }).join('');
-
-  /* Attendance table */
-  renderTable(allData);
-
-  /* Feedbacks */
-  renderFeedbacks(allData);
 }
 
-function renderFeedbacks(data){
-  const fbData=data.filter(d=>d.feedback&&d.feedback.toString().trim()!=='');
-  const wrap=document.getElementById('fb-list-wrap');
-  const empty=document.getElementById('fb-empty');
-  document.getElementById('fb-count-lbl').textContent=`${fbData.length} feedback submission${fbData.length!==1?'s':''}`;
-  if(!fbData.length){wrap.innerHTML='';empty.style.display='block';return;}
-  empty.style.display='none';
-  wrap.innerHTML=fbData.map(d=>`
-    <div class="fb-item">
-      <div class="fb-name">👤 ${d.name||'Anonymous'} <span style="color:var(--muted);font-weight:400;font-size:.75rem">· ${(d.district||'').trim()}</span></div>
-      <div class="fb-msg">${escHtml(d.feedback.toString())}</div>
-      ${d.time&&d.time.toString().trim()?`<div class="fb-time">🕐 ${d.time}</div>`:''}
-    </div>`).join('');
+// ─────────────────────────────────────────
+// ATTENDANCE TABLE
+// ─────────────────────────────────────────
+let tableData = [];
+function renderTable(data) {
+  tableData = data;
+  const present = data.filter(d => d.status && d.status.toString().trim() !== '').length;
+  document.getElementById('attend-count-lbl').textContent = `${present} present of ${data.length}`;
+  filterTable();
 }
 
-function escHtml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
-
-let tableData=[];
-function renderTable(data){
-  tableData=data;
-  const presentOnly=data.filter(d=>d.status&&d.status.toString().trim()!=='');
-  document.getElementById('attend-count-lbl').textContent=`${presentOnly.length} present`;
-  const search=document.getElementById('tbl-search').value.toLowerCase();
-  filterTable(search);
-}
-
-function filterTable(search){
-  if(search===undefined)search=document.getElementById('tbl-search').value.toLowerCase();
-  const filtered=tableData.filter(d=>(d.name||'').toLowerCase().includes(search)||(d.district||'').toLowerCase().includes(search)||(d.ds_office||'').toLowerCase().includes(search));
-  const tbody=document.getElementById('tbl-body');
-  const empty=document.getElementById('tbl-empty');
-  if(!filtered.length){tbody.innerHTML='';empty.style.display='block';return;}
-  empty.style.display='none';
-  tbody.innerHTML=filtered.map((d,i)=>{
-    const isPresent=d.status&&d.status.toString().trim()!=='';
-    const timeStr=d.time&&d.time.toString().trim()!==''?`<span class="time-text">${d.time}</span>`:'<span class="time-text">—</span>';
+function filterTable() {
+  const q = (document.getElementById('tbl-search').value || '').toLowerCase();
+  const filtered = tableData.filter(d =>
+    (d.name || '').toLowerCase().includes(q) ||
+    (d.district || '').toLowerCase().includes(q) ||
+    (d.ds_office || '').toLowerCase().includes(q)
+  );
+  const tbody = document.getElementById('tbl-body');
+  const empty = document.getElementById('tbl-empty');
+  if (!filtered.length) { tbody.innerHTML = ''; empty.style.display = 'block'; return; }
+  empty.style.display = 'none';
+  tbody.innerHTML = filtered.map((d, i) => {
+    const isPresent = d.status && d.status.toString().trim() !== '';
+    const timeStr   = d.time && d.time.toString().trim() ? `<span class="time-text">${escHtml(d.time)}</span>` : '<span class="time-text">—</span>';
     return `<tr>
-      <td style="color:var(--muted)">${i+1}</td>
-      <td style="font-weight:500">${d.name||'—'}</td>
-      <td style="color:var(--muted)">${(d.district||'').trim()}</td>
-      <td style="color:var(--muted);font-size:.78rem">${(d.ds_office||'').replace(' Divisional Secretariat','').trim()}</td>
-      <td>${isPresent?'<span class="badge badge-present">✔ Present</span>':'<span class="badge badge-absent">Pending</span>'}</td>
+      <td style="color:var(--muted)">${i + 1}</td>
+      <td style="font-weight:500">${escHtml(d.name || '—')}</td>
+      <td style="color:var(--muted)">${escHtml((d.district || '').trim())}</td>
+      <td style="color:var(--muted);font-size:.78rem">${escHtml((d.ds_office || '').trim())}</td>
+      <td>${isPresent ? '<span class="badge badge-present">✔ Present</span>' : '<span class="badge badge-absent">Pending</span>'}</td>
       <td>${timeStr}</td>
     </tr>`;
   }).join('');
 }
 
-/* ── CLEAR DATA ── */
-function showClearModal(){
-  document.getElementById('clear-pass-input').value='';
-  document.getElementById('clear-err').style.display='none';
-  document.getElementById('clear-modal-overlay').classList.add('show');
-  setTimeout(()=>document.getElementById('clear-pass-input').focus(),200);
+// ─────────────────────────────────────────
+// FEEDBACKS VIEW
+// ─────────────────────────────────────────
+function renderFeedbacks(data) {
+  const fbData = data.filter(d => d.feedback && d.feedback.toString().trim() !== '');
+  const wrap   = document.getElementById('fb-list-wrap');
+  const empty  = document.getElementById('fb-empty');
+  document.getElementById('fb-count-lbl').textContent = `${fbData.length} feedback submission${fbData.length !== 1 ? 's' : ''}`;
+  if (!fbData.length) { wrap.innerHTML = ''; empty.style.display = 'block'; return; }
+  empty.style.display = 'none';
+  wrap.innerHTML = fbData.map(d => `
+    <div class="fb-item">
+      <div class="fb-name">👤 ${escHtml(d.name || 'Anonymous')}
+        <span style="color:var(--muted);font-weight:400;font-size:.75rem">
+          ${d.district ? ' · ' + escHtml(d.district.trim()) : ''}
+          ${d.ds_office ? ' → ' + escHtml(d.ds_office.trim()) : ''}
+        </span>
+      </div>
+      <div class="fb-msg">${escHtml(d.feedback.toString())}</div>
+      ${d.time && d.time.toString().trim() ? `<div class="fb-time">🕐 ${escHtml(d.time)}</div>` : ''}
+    </div>`).join('');
 }
-function closeClearModal(e){if(e.target===document.getElementById('clear-modal-overlay'))closeClearModalBtn()}
-function closeClearModalBtn(){document.getElementById('clear-modal-overlay').classList.remove('show')}
 
-async function confirmClear(){
-  const pass=document.getElementById('clear-pass-input').value;
-  if(pass!=='pfundrem'){
-    document.getElementById('clear-err').style.display='block';return;
+// ─────────────────────────────────────────
+// MANAGE OFFICERS
+// ─────────────────────────────────────────
+function onMgmtDistrictChange() {
+  const dist = document.getElementById('mgmt-district').value;
+  const dsoSel = document.getElementById('mgmt-dsoffice');
+  dsoSel.innerHTML = '<option value="">— Select DS Office —</option>';
+  dsoSel.disabled = !dist;
+  if (!dist) return;
+  const offices = uniqueSorted(officersData.filter(d => (d.district || '').trim() === dist).map(d => d.ds_office?.trim()));
+  offices.forEach(o => dsoSel.add(new Option(o, o)));
+  dsoSel.disabled = false;
+}
+
+function renderOfficersList() {
+  const q = (document.getElementById('mgmt-search').value || '').toLowerCase();
+  const filtered = officersData
+    .filter(d => d.name) // Test names filter removed
+    .filter(d =>
+      !q ||
+      (d.name || '').toLowerCase().includes(q) ||
+      (d.district || '').toLowerCase().includes(q) ||
+      (d.ds_office || '').toLowerCase().includes(q)
+    );
+
+  const div = document.getElementById('officers-list');
+  if (!filtered.length) {
+    div.innerHTML = '<div class="empty-state"><div class="em-icon">👤</div>No officers found.</div>';
+    return;
   }
-  document.getElementById('clear-err').style.display='none';
+  div.innerHTML = filtered.map(d => `
+    <div class="officer-item">
+      <div class="officer-item-info">
+        <div class="oname">${escHtml(d.name)}</div>
+        <div class="ometa">${escHtml(d.district)} → ${escHtml(d.ds_office)}</div>
+      </div>
+      <button class="btn-remove" data-name="${escHtml(d.name).replace(/"/g,'&quot;')}" onclick="removeOfficer(this.dataset.name)">Remove</button>
+    </div>`).join('');
+}
+
+async function addNewOfficer() {
+  const district = document.getElementById('mgmt-district').value;
+  const dsOffice = document.getElementById('mgmt-dsoffice').value;
+  const name     = document.getElementById('mgmt-name').value.trim();
+  if (!district || !dsOffice || !name) {
+    showModal('⚠️', 'Required Fields', 'Please fill in all fields: District, DS Office, and Full Name.');
+    return;
+  }
+  await doAddOfficer(name, district, dsOffice);
+  document.getElementById('mgmt-name').value = '';
+}
+
+async function doAddOfficer(name, district, dsOffice, silent = false) {
+  if (!silent) loading(true);
+  try {
+    await apiCall(`${API}?action=add_officer&name=${encodeURIComponent(name)}&district=${encodeURIComponent(district)}&ds_office=${encodeURIComponent(dsOffice)}`, false);
+    
+    // Instantly inject into local UI variables
+    const newObj = { 
+        name: name, 
+        district: district, 
+        ds_office: dsOffice, 
+        status: '', 
+        time: '', 
+        feedback: '' 
+    };
+    allData.push(newObj);
+    officersData.push(newObj);
+    
+    // Keep a session-level record so this officer survives backend refreshes
+    // (backend may be slow to save; merge ensures we don't lose them on refresh)
+    if (!locallyAddedOfficers.find(o => o.name?.trim() === name.trim())) {
+      locallyAddedOfficers.push({ ...newObj });
+    }
+    
+    populateDistrictDropdown();
+    
+    if (isLoggedIn) {
+        renderDashboard();
+        if (document.getElementById('admin-manage-view').style.display === 'block') {
+            renderOfficersList();
+        }
+    }
+    
+    if (!silent) {
+        showModal('✅', 'Officer Added', `<strong>${escHtml(name)}</strong> has been added to ${escHtml(district)} → ${escHtml(dsOffice)} and is now available in all dropdowns.`);
+    }
+  } catch (e) {
+    if (!silent) showModal('❌', 'Error', 'Failed to add officer. Please check your connection.');
+    if (!silent) loading(false);
+    throw e;
+  }
+  if (!silent) loading(false);
+}
+
+async function removeOfficer(name) {
+  if (!confirm(`Remove "${name}" from the officers list? This cannot be undone.`)) return;
+  loading(true);
+  try {
+    await apiCall(`${API}?action=remove_officer&name=${encodeURIComponent(name)}`, false);
+    
+    allData = allData.filter(d => d.name !== name);
+    officersData = officersData.filter(d => d.name !== name);
+    locallyAddedOfficers = locallyAddedOfficers.filter(d => d.name !== name);
+    
+    populateDistrictDropdown();
+    
+    if (isLoggedIn) {
+        renderDashboard();
+        if (document.getElementById('admin-manage-view').style.display === 'block') {
+            renderOfficersList();
+        }
+    }
+    showModal('✅', 'Officer Removed', `${escHtml(name)} has been removed from the list.`);
+  } catch (e) {
+    showModal('❌', 'Error', 'Failed to remove officer. Please check your connection.');
+  }
+  loading(false);
+}
+
+// ─────────────────────────────────────────
+// CLEAR DATA MODAL (multi-step)
+// ─────────────────────────────────────────
+function showClearModal() {
+  clearState = { scope: '', district: '', dsOffice: '' };
+  clearGoToStep(1);
+  document.getElementById('clear-pass-input').value = '';
+  document.getElementById('clear-err').style.display = 'none';
+  document.getElementById('clear-modal-overlay').classList.add('show');
+}
+
+function closeClearModal(e) {
+  if (e.target === document.getElementById('clear-modal-overlay')) closeClearModalBtn();
+}
+function closeClearModalBtn() {
+  document.getElementById('clear-modal-overlay').classList.remove('show');
+}
+
+function clearGoToStep(step) {
+  [1, 2, 3].forEach(s => {
+    document.getElementById('clear-s' + s).style.display = s === step ? 'block' : 'none';
+  });
+  
+  if (step === 3 && clearState.district) {
+    clearState.dsOffice = document.getElementById('clear-dso-select').value;
+    document.getElementById('clear-s3-back').onclick = () => clearGoToStep(2);
+    const scopeText = clearState.dsOffice
+      ? `📍 ${clearState.district} → ${clearState.dsOffice}`
+      : `📍 ${clearState.district} — Entire District`;
+    document.getElementById('clear-scope-tag').textContent = scopeText;
+    document.getElementById('clear-pass-input').value = '';
+    document.getElementById('clear-err').style.display = 'none';
+  }
+}
+
+function clearInitScope(scope) {
+  clearState.scope = scope;
+  const isDistrict = uniqueSorted(officersData.map(d => d.district?.trim())).includes(scope);
+
+  if (isDistrict) {
+    clearState.district = scope;
+    document.getElementById('clear-district-label').textContent = scope;
+    const dsoSel = document.getElementById('clear-dso-select');
+    dsoSel.innerHTML = '<option value="">— Entire District —</option>';
+    
+    const offices = uniqueSorted(officersData
+      .filter(d => (d.district || '').trim() === scope)
+      .map(d => d.ds_office?.trim())
+    );
+    offices.forEach(o => dsoSel.add(new Option(o, o)));
+    clearGoToStep(2);
+  } else {
+    clearState.district = '';
+    clearState.dsOffice = '';
+    document.getElementById('clear-s3-back').onclick = () => clearGoToStep(1);
+    const tags = {
+      'all_districts': '🗑️ All Districts — Clears attendance & feedback for all officers',
+      'everything': '⚠️ Everything — Removes ALL data including anonymous feedback rows'
+    };
+    document.getElementById('clear-scope-tag').textContent = tags[scope] || scope;
+    document.getElementById('clear-pass-input').value = '';
+    document.getElementById('clear-err').style.display = 'none';
+    clearGoToStep(3);
+  }
+}
+
+async function executeClear() {
+  const pass = document.getElementById('clear-pass-input').value;
+  if (pass !== CLEAR_PASS) {
+    document.getElementById('clear-err').style.display = 'block';
+    return;
+  }
+  document.getElementById('clear-err').style.display = 'none';
   closeClearModalBtn();
   loading(true);
-  // GAS write ops must use no-cors — GAS redirect breaks regular CORS fetch for writes
-  try{ await fetch(`${API}?action=clear_all`,{method:'GET',mode:'no-cors'}); }catch(e){}
-  // Wait for GAS to process, then re-fetch to verify
-  await new Promise(r=>setTimeout(r,2500));
-  try{
-    const r=await fetch(`${API}?action=get_data`);
-    const fresh=await r.json();
-    const stillPresent=fresh.filter(d=>d.status&&d.status.toString().trim()!=='').length;
-    allData=fresh;
-    loading(false);
-    if(stillPresent===0){
-      showModal('✅','Data Cleared','All attendance and feedback records have been cleared successfully.');
-      renderDashboard();
+
+  let url;
+  const scope = clearState.scope;
+
+  if (scope === 'everything') {
+    url = `${API}?action=clear_all`;
+  } else if (scope === 'all_districts') {
+    url = `${API}?action=clear_district`;
+  } else {
+    url = `${API}?action=clear_district&district=${encodeURIComponent(clearState.district)}`;
+    if (clearState.dsOffice) url += `&ds_office=${encodeURIComponent(clearState.dsOffice)}`;
+  }
+
+  try {
+    await apiCall(url, false);
+    await new Promise(r => setTimeout(r, 2500));
+
+    // Sync in-memory locally-added officers so they don't survive a clear
+    if (scope === 'everything') {
+      // Full wipe — remove all locally-added officers entirely
+      locallyAddedOfficers = [];
+    } else if (scope === 'all_districts') {
+      // Attendance + feedback cleared for everyone
+      locallyAddedOfficers.forEach(o => { o.status = ''; o.time = ''; o.feedback = ''; });
     } else {
-      showModal('⚠️','Check Apps Script',`Clear was sent but ${stillPresent} records may remain. Make sure your Apps Script has the clear_all action and is re-deployed.`);
-      renderDashboard();
+      // District (or district + DS office) targeted clear
+      locallyAddedOfficers.forEach(o => {
+        if ((o.district || '').trim() === clearState.district &&
+            (!clearState.dsOffice || (o.ds_office || '').trim() === clearState.dsOffice)) {
+          o.status = ''; o.time = ''; o.feedback = '';
+        }
+      });
     }
-  }catch(e){
+
+    await refreshDashboard();
     loading(false);
-    showModal('⚠️','Sent — Please Verify','Clear request was sent. Refresh the dashboard to confirm it worked.');
+    showModal('✅', 'Data Cleared', 'The selected attendance records have been cleared successfully.');
+  } catch (e) {
+    loading(false);
+    showModal('⚠️', 'Sent', 'Clear request was sent. Refresh the dashboard to verify.');
   }
 }
 
-/* ── INIT ── */
+// ─────────────────────────────────────────
+// INIT
+// ─────────────────────────────────────────
 loadData();
 </script>
 </body>
